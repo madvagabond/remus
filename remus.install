@@ -1,0 +1,20 @@
+lib: [
+  "_build/install/default/lib/remus/META" {"META"}
+  "_build/install/default/lib/remus/frame.ml" {"frame.ml"}
+  "_build/install/default/lib/remus/opam" {"opam"}
+  "_build/install/default/lib/remus/protocol.mli" {"protocol.mli"}
+  "_build/install/default/lib/remus/remus.a" {"remus.a"}
+  "_build/install/default/lib/remus/remus.cma" {"remus.cma"}
+  "_build/install/default/lib/remus/remus.cmi" {"remus.cmi"}
+  "_build/install/default/lib/remus/remus.cmt" {"remus.cmt"}
+  "_build/install/default/lib/remus/remus.cmx" {"remus.cmx"}
+  "_build/install/default/lib/remus/remus.cmxa" {"remus.cmxa"}
+  "_build/install/default/lib/remus/remus.cmxs" {"remus.cmxs"}
+  "_build/install/default/lib/remus/remus.dune" {"remus.dune"}
+  "_build/install/default/lib/remus/remus.ml-gen" {"remus.ml-gen"}
+  "_build/install/default/lib/remus/remus__Frame.cmi" {"remus__Frame.cmi"}
+  "_build/install/default/lib/remus/remus__Frame.cmt" {"remus__Frame.cmt"}
+  "_build/install/default/lib/remus/remus__Frame.cmx" {"remus__Frame.cmx"}
+  "_build/install/default/lib/remus/remus__Protocol.cmi" {"remus__Protocol.cmi"}
+  "_build/install/default/lib/remus/remus__Protocol.cmti" {"remus__Protocol.cmti"}
+]
