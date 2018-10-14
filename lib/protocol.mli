@@ -1,21 +1,22 @@
 
 
 
-module Headers: sig
+module Header: sig
 
-  type t = {
+  type t =  {
 
-    connection_id: int64;
+    cid: int64;
     ftype: int;
-    seq_no: int32;
+    seq_no: int64;
 
     timestamp: int64;
     len: int
   }
 
 
+
   val write: Cstruct.t -> t -> unit
-  val read: Cstruct.t -> ('a, string) result
+  val read: Cstruct.t -> (t, string) result
   val size: t -> int
 
   
@@ -29,36 +30,34 @@ end
 
 
 
-module Frame: sig
+module Payload: sig
   
-  type t =
+   type t =
     | SYN of {seq_no: int64; window: int64}
-    | ACK of {ack_no: int64; rtt: int64}
-             
-    | NACK of (int64 list)
-    | STREAM of stream
+    | ACK of {seq_no: int64; rtt: int64}
 
-    | RST_STREAM of rst_stream
+    | NACK of (int64 list)
+    | STREAM of {
+      sid: int32; fin: bool;
+      offset: int64; len: int;
+      payload: Cstruct.t 
+    }
+
+    | RST_STREAM of {sid: int32; code: int; off: int64}
     | PING
     | PONG
 
-    | GO_AWAY of int64 
-    | SHUTDOWN of int64
+    | GO_AWAY of int64
 
-    | SHUTDOWN_ACK of int64
+    | SHUTDOWN
+    | SHUTDOWN_ACK
 
-  and stream = {
-      stream_id: int32; fin: bool;
-      offset: int64; len: int;
-      data: Cstruct.t 
-    }
 
-  and rst_stream = {sid: int32; code: int; off: int32};;
 
 
 
   val write: Cstruct.t -> t -> unit
-  val read: Cstruct.t -> (t, string) result
+  val read: Header.t -> Cstruct.t -> (t, string) result
 
   val size: t -> int
   

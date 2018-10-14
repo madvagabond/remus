@@ -2,6 +2,5 @@
  ((name remus)
   (public_name remus)
   (libraries  (cstruct tcpip.udp))
-  (modules_without_implementation protocol)
   (preprocess (pps (ppx_cstruct)))
   (synopsis "Reliable Multiplexed UDP")))

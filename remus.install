@@ -2,6 +2,7 @@ lib: [
   "_build/install/default/lib/remus/META" {"META"}
   "_build/install/default/lib/remus/frame.ml" {"frame.ml"}
   "_build/install/default/lib/remus/opam" {"opam"}
+  "_build/install/default/lib/remus/protocol.ml" {"protocol.ml"}
   "_build/install/default/lib/remus/protocol.mli" {"protocol.mli"}
   "_build/install/default/lib/remus/remus.a" {"remus.a"}
   "_build/install/default/lib/remus/remus.cma" {"remus.cma"}
@@ -16,5 +17,7 @@ lib: [
   "_build/install/default/lib/remus/remus__Frame.cmt" {"remus__Frame.cmt"}
   "_build/install/default/lib/remus/remus__Frame.cmx" {"remus__Frame.cmx"}
   "_build/install/default/lib/remus/remus__Protocol.cmi" {"remus__Protocol.cmi"}
+  "_build/install/default/lib/remus/remus__Protocol.cmt" {"remus__Protocol.cmt"}
   "_build/install/default/lib/remus/remus__Protocol.cmti" {"remus__Protocol.cmti"}
+  "_build/install/default/lib/remus/remus__Protocol.cmx" {"remus__Protocol.cmx"}
 ]
